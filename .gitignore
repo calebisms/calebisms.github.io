@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 project.Rproj
+.DS_Store
+_site/
