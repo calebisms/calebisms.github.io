@@ -1,8 +1,8 @@
 ---
 layout: indexcategory
-title: "Cheatsheets"
-include_collection: cheatsheet
-permalink: /cheatsheets
+title: "Samples"
+include_collection: samples
+permalink: /samples
 show_breadcrumb: true
 ---
 

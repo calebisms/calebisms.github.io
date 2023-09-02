@@ -1,0 +1,26 @@
+---
+layout: default
+title: Contact Us
+permalink: /contact
+excerpt: Get in touch to see how we can make a difference in your writing project
+show_breadcrumb   : true
+---
+
+<form action='mailto:caleb@smallplanet.au'>
+	<fieldset name='contact_form'>
+		<legend>Tell us about your project, and we'll be in touch right away.</legend>	
+		<div class='form-floating'>
+			<label for='name_input'>Name</label>
+			<input type='text' name='name' class='form_control' id='name_input'/>
+		</div>
+		<div class='form-floating'>
+			<label for='email_input'>Email</label>
+			<input type='email' name='email' class='form_control' id='email_input'/>
+		</div>
+		<div class='form-floating'>
+			<label for='details_input'>Project details or query</label>
+			<textarea type='text' name='project_details' class='form_control' id='details_input' style='height: 4em;'></textarea>
+		</div>
+		<button type='submit' class='btn btn-primary'>Send enquiry</button>
+	</fieldset>
+</form>

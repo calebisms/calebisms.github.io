@@ -1,24 +1,17 @@
 ---
 layout: default
-title: Chulapa on remote
+title: Small Planet Copyediting
 header_type: hero
-subtitle: Starter pack
+header_img: './assets/img/pd.jpg'
+subtitle: Copyediting to Make the World Smaller
 ---
 
-Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
+My name is Caleb Turner, and I'm a full-time freelance editor who’s passionate about reading, writing, travel, and exploring the outdoors. I grew up in the US and moved to Australia in 2019, and I’ve previously worked as a high school English teacher and in a sales and volunteer management role for a not-for-profit. That means I have a strong command of the Australian, British, and American styles of English, and I know how to promote a brand and communicate ideas with clarity and joy. My editing work includes blogs, novels, websites, letters, children’s books, poetry, and more.
 
-Contains basic configuration to get you a site with:
+Our editing service is priced competitively based on the level of detail you need:
 
-- Sample posts and [paginated blog index](./blog/).
-- Sample collection with Markdown and kramdown cheatsheets and [collection index](./cheatsheets).
-- Archive pages for posts grouped by year, category, and tag.
-- Demo page with the different Bootstrap components and how they look with the actual skin settings.
-- Sample 404 page.
-- Site search with Lunr.
-- Sample `_config` with minimal configuration. `primary` color is set to <span class="text-primary">LightSkyBlue</span> and `autothemer` is enabled. [Learn how to customize your site](https://dieghernan.github.io/chulapa/docs/03-theming).
-- Sample `algolia-search.yml` for using Algolia+GitHub Actions.
-- Sample files for extending the theme with your own scripts and css.
+* **Basic proofread (US$10/A$15 per 1000 words):** Spelling and major grammar points, punctuation, and capitalization
+* **Standard line edit (US$20/A$30 per 1000 words):** Detailed grammar check (verb tenses, parallel structure, run-on sentences, repeated words), formatting (font, spacing, indents), internal consistency
+* **Detailed structural edit (US$30/A$45 per 1000 words):** Rearrange and rewrite sentences/paragraphs to be natural and engaging. Polish pacing and delivery, character/argument development; condense and reword confusing sentences.
 
-On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitemap.xml), and Chulapa generates an Atom feed on [./atom.xml](./atom.xml) and a RSS 2.0 feed on [./rss.xml](./rss.xml).
-
-[Configure as necessary](https://dieghernan.github.io/chulapa/docs/02-config) and replace sample content with your own.
+To learn more about how I can help your writing excel, [contact us](./contact/) today. I look forward to working with you!

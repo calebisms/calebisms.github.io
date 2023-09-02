@@ -7,23 +7,23 @@ remote_theme: dieghernan/chulapa
 # A. Site Settings /SEO options
 # Overall options for your site, would affect your site SEO
 # Default values are explained
-locale                  :     #default["en-US"] format language-TERRITORY , e.g fr, en-GB, es-MX, pt-BR
-title                   : Chulapa 101    #default["repository_name"]
+locale                  : "en-AU"
+title                   : "Small Planet Copyediting"    #default["repository_name"]
 title_separator         :     #default [" | "]
-subtitle                : Chulapa Jekyll Theme starter pack    #default [your-repository-tagline]  
-description             : Chulapa Jekyll Theme starter pack #default [your-repository-tagline]
+subtitle                :     #default [your-repository-tagline]  
+description             : "A global copyediting service for all written work, from articles and blogs to memoirs and novels" #default [your-repository-tagline]
 url                     :     #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
-timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/configuration/options/ and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone                :     "Australia/Brisbane" #see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # SEO
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
 author:
-  name                  :  Your Name   # Name Surname Company
+  name                  :  Small Planet Copyediting   # Name Surname Company
   avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
-  location              :  "Madrid, Spain"   # New York, USA 
+  location              :  "Cairns, Australia"   # New York, USA 
 #  links:                
 #    - url:  #A link or email: https://twitter.com/jack, mail@example.com
 #      icon: # A Fontawesome 5 code: fab fa-twitter - see https://fontawesome.com/
@@ -95,41 +95,21 @@ navbar:
   brand:
     title   :  Home # Title in navbar
     url     :  # default["url/baseurl"]
-    img     :  # An small image, try 30x30px
+    img     :  "./assets/img/globe.png"
   nav:
-  - title   : Blog # Label
-    url     : /blog/ # url	
-  - title   : Cheatsheets
-    url     : /cheatsheets
-  - title   : Extras
-    child   :
-      - title : Tags
-        url   : /tags
-      - title : Categories
-        url   : /categories
-      - title : Archive
-        url   : /archive
-      - title : Current skin
-        url   : /current-skin
-  - title   : Docs
-    url     : https://dieghernan.github.io/chulapa/docs/01-install
-  - title   : Use this template
-    url     : https://github.com/dieghernan/chulapa-101/generate
-#  - title   : # Label submenu
-#    child:		
-#    - title: # Child label		
-#      url  : # child url	
-#    - title: # Child label		
-#      url  : # child url	
+#   - title   : Samples
+#     url     : /samples
+  - title: About
+    url: /about
+  - title: Pricing
+    url: /pricing
+  - title: FAQ
+    url: /faq
+  - title: Contact
+    url: /contact
+
 #Social links to be placed on your site footer
 footer:
-  links:
-    - label : Repo on Github # Label
-      icon  : fab fa-github # Fontawesome 5 icon
-      url   : https://github.com/dieghernan/chulapa-101 # A link or email: https://twitter.com/jack, mail@example.com
-    - label: "RSS"
-      icon: "fa fa-rss"
-      url:  "./atom.xml"
   copyright: # default is © <year> <name> 
   
 # C. Theme Settings
@@ -140,25 +120,22 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight     :  # default["default"]
-  skin         :  # Optional predefined skins
+  skin         : sketchy # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
   vars          :    
     primary     : lightskyblue #default ["#007bff"] - Bootstrap blue
+    body-bg: "#1182c7"
+    body-color: "white"
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
-# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
-paginate: 4
-paginate_path: "/blog/page:num/"
-paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
-
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-collections:
-  cheatsheet:
-    output: true
-    permalink: /cheatsheets/:name
-collections_dir     : 
-permalink           : /:year:month:day_:title/
+# collections:
+#   samples:
+#     output: true
+#     permalink: /samples/:name
+# collections_dir     : 
+# permalink           : /:year:month:day_:title/
 
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
@@ -172,40 +149,19 @@ defaults:
       include_on_search   : false
       cloudtag_url        : /tags #This is where the link on tags would redirect
       cloudcategory_url   : /categories #This is where the link on categories would redirect
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      header_type       : "post"
-      include_on_search : true
-      include_on_feed   : true
-      show_date         : true
-      show_related      : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      show_comments     : true
-      show_tags         : true
-      show_categories   : true
-      show_author       : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Blog
-          url: /blog/
-  -
-    scope:
-      path: ""
-      type: "cheatsheet"
-    values:
-      header_type       : "hero"
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      include_on_search : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Cheatsheets
-          url: /cheatsheets
-
+#   -
+#     scope:
+#       path: ""
+#       type: "samples"
+#     values:
+#       header_type       : "hero"
+#       show_bottomnavs   : true
+#       show_sociallinks  : true
+#       include_on_search : true
+#       show_breadcrumb   : true
+#       breadcrumb_list   :
+#         - label: Samples
+#           url: /samples
 
 # XX. Other settings - no need to modify
 # HTML Compression
