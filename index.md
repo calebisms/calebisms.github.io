@@ -14,4 +14,4 @@ Our editing service is priced competitively based on the level of detail you nee
 * **Standard line edit (US$20/A$30 per 1000 words):** Detailed grammar check (verb tenses, parallel structure, run-on sentences, repeated words), formatting (font, spacing, indents), internal consistency
 * **Detailed structural edit (US$30/A$45 per 1000 words):** Rearrange and rewrite sentences/paragraphs to be natural and engaging. Polish pacing and delivery, character/argument development; condense and reword confusing sentences.
 
-To learn more about how I can help your writing excel, [contact us](./contact/) today. I look forward to working with you!
+To learn more about how I can help your writing excel, [contact us](./contact) today. I look forward to working with you!
