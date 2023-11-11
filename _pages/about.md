@@ -6,7 +6,7 @@ excerpt: Who we are and what we do
 show_breadcrumb   : true
 ---
 
-I love bringing words to life!
+## I love bringing words to life.
 
 When I was ten I started publishing a magazine for friends and family, and I haven’t stopped writing since. I studied computer science in my undergrad, then realised I needed to get closer to my passion of writing, so I got my master’s in English education. 
 
