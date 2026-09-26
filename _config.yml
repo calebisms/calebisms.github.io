@@ -127,6 +127,7 @@ chulapa-skin:
     primary     : lightskyblue #default ["#007bff"] - Bootstrap blue
     body-bg: "#1182c7"
     body-color: "white"
+    font-size-base: 1.125rem # 18px; Bootstrap's default is 1rem (16px)
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 

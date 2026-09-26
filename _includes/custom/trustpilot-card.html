@@ -1,0 +1,84 @@
+{%- comment -%}
+  Trustpilot reviews card for the home page. Rating and quotes come from
+  _data/trustpilot.yml. The only TrustBox on our Trustpilot plan is the
+  "Review Collector" button, which renders only on smallplanet.au (it shows
+  as a plain link when previewing locally).
+{%- endcomment -%}
+{%- assign tp = site.data.trustpilot -%}
+{%- capture tp_star -%}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.7l7.1-.6z"/></svg>{%- endcapture -%}
+<div class="card trustpilot-card text-dark">
+  <div class="card-body">
+    <h2 class="h5 card-title text-center mb-3">What our clients say</h2>
+
+    <a class="tp-summary" href="{{ tp.profile_url }}" target="_blank" rel="noopener">
+      <span class="tp-score">{{ tp.trust_score }}</span>
+      <span class="tp-stars tp-stars-lg" role="img" aria-label="Rated {{ tp.stars }} out of 5 stars">
+        {%- for i in (1..5) -%}
+          {%- assign half = i | minus: 0.5 -%}
+          {%- if tp.stars >= i -%}{%- assign fill = "full" -%}
+          {%- elsif tp.stars >= half -%}{%- assign fill = "half" -%}
+          {%- else -%}{%- assign fill = "empty" -%}{%- endif -%}
+          <span class="tp-star tp-star-{{ fill }}">{{ tp_star }}</span>
+        {%- endfor -%}
+      </span>
+      <span class="tp-meta">
+        TrustScore · {{ tp.review_count }} reviews on
+        <span class="tp-brand"><span class="tp-brand-star">{{ tp_star }}</span>Trustpilot</span>
+      </span>
+    </a>
+
+    {%- comment -%} One quote at a time, using Bootstrap 4's carousel (loaded by the theme). {%- endcomment %}
+    <div id="tp-reviews" class="carousel slide tp-carousel" role="group" aria-roledescription="carousel" aria-label="Client reviews">
+      <div class="carousel-inner">
+        {%- for review in tp.reviews %}
+        <figure class="carousel-item tp-review{% if forloop.first %} active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ forloop.length }}">
+          <span class="tp-stars" role="img" aria-label="{{ review.rating }} out of 5 stars">
+            {%- for i in (1..5) -%}
+              <span class="tp-star {% if review.rating >= i %}tp-star-full{% else %}tp-star-empty{% endif %}">{{ tp_star }}</span>
+            {%- endfor -%}
+          </span>
+          <blockquote class="mb-1">“{{ review.quote }}”</blockquote>
+          <figcaption>{{ review.name }}{% if review.country %}, {{ review.country }}{% endif %}</figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+      {%- if tp.reviews.size > 1 %}
+      <div class="tp-carousel-nav">
+        <button type="button" class="tp-carousel-arrow" data-target="#tp-reviews" data-slide="prev" aria-label="Previous review">‹</button>
+        <div class="carousel-indicators">
+          {%- for review in tp.reviews %}
+          <button type="button" data-target="#tp-reviews" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %} aria-label="Show review {{ forloop.index }}"></button>
+          {%- endfor %}
+        </div>
+        <button type="button" class="tp-carousel-arrow" data-target="#tp-reviews" data-slide="next" aria-label="Next review">›</button>
+      </div>
+      {%- endif %}
+    </div>
+
+    <a class="btn btn-primary btn-block mt-3" href="{{ tp.profile_url }}" target="_blank" rel="noopener">Read all {{ tp.review_count }} reviews</a>
+
+    <div class="tp-collector">
+      <p class="small text-center mb-1">Worked with us? We'd love your feedback.</p>
+      <div class="trustpilot-widget" data-locale="en-AU" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="{{ tp.business_unit_id }}" data-style-height="52px" data-style-width="100%">
+        <a href="{{ tp.profile_url }}" target="_blank" rel="noopener">Review us on Trustpilot</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<script>
+  // jQuery and Bootstrap load at the bottom of the page, so start the carousel on load.
+  // It auto-advances (pausing on hover) until the visitor uses the controls, and never
+  // auto-advances for visitors who prefer reduced motion.
+  window.addEventListener('load', function () {
+    var $reviews = window.jQuery && jQuery('#tp-reviews');
+    if (!$reviews || !$reviews.length || !$reviews.carousel) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $reviews.carousel({ interval: reduceMotion ? false : 7000, pause: 'hover' });
+    if (!reduceMotion) $reviews.carousel('cycle');
+    $reviews.find('[data-slide], [data-slide-to]').on('click', function () {
+      $reviews.carousel('pause');
+      $reviews.data('bs.carousel')._config.interval = false;
+    });
+  });
+</script>

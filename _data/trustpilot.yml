@@ -1,0 +1,25 @@
+# Trustpilot summary shown on the home page (_includes/custom/trustpilot-card.html).
+# Update these by hand from https://www.trustpilot.com/review/smallplanet.au
+# when new reviews come in.
+
+profile_url: https://www.trustpilot.com/review/smallplanet.au
+business_unit_id: 657b8a17e941648254322805
+
+trust_score: 4.3   # The number Trustpilot shows next to "TrustScore"
+stars: 4.5         # Star graphic Trustpilot shows (rounded to the nearest half star)
+review_count: 9
+
+# Quotes to feature. Keep them short. Use "…" to trim a longer review.
+reviews:
+  - name: Nathan
+    country: Canada
+    rating: 5
+    quote: "He gave me fantastic feedback, coaching and guidance. He challenged me to see my story differently, which made the end product much stronger."
+  - name: Maria
+    country: United States
+    rating: 5
+    quote: "I’ve worked with over a dozen B2B copyeditors and proofreaders, and Caleb is by far the best."
+  - name: Booker
+    country: Japan
+    rating: 5
+    quote: "Sometimes, I would ask him to revise a particular essay multiple times, and he always remained patient and helpful."

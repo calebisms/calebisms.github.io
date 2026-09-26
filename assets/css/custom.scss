@@ -5,3 +5,218 @@
 .text-black {
 	color: black;
 }
+// Trustpilot reviews card on the home page
+$tp-green: #00b67a;
+
+.trustpilot-card {
+	background-color: #fff;
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+	// Keep the card at 16px text so it fits beside the (larger) page text
+	font-size: 1rem;
+
+	.card-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.btn {
+		font-size: 1rem;
+	}
+
+	a:not(.btn) {
+		color: #1182c7;
+	}
+
+	// Darker than the site's lightskyblue primary, so the white label is readable
+	.btn-primary {
+		background-color: #0e6ca6;
+		border-color: #0e6ca6;
+
+		&:hover,
+		&:focus {
+			background-color: #0b5a8a;
+			border-color: #0b5a8a;
+		}
+	}
+
+	@media (min-width: 992px) {
+		position: sticky;
+		top: 5rem;
+	}
+}
+
+.tp-summary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	color: inherit !important;
+	text-decoration: none !important;
+
+	.tp-score {
+		font-size: 2.5rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0.4rem;
+	}
+
+	.tp-meta {
+		font-size: 0.85rem;
+		margin-top: 0.4rem;
+		text-align: center;
+	}
+
+	.tp-brand {
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	.tp-brand-star svg {
+		width: 1em;
+		height: 1em;
+		fill: $tp-green;
+		vertical-align: -0.1em;
+		margin-right: 0.1em;
+	}
+}
+
+.tp-stars {
+	display: inline-flex;
+	gap: 2px;
+}
+
+.tp-star {
+	display: inline-flex;
+	width: 1rem;
+	height: 1rem;
+	padding: 2px;
+	background: #dcdce6;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: #fff;
+	}
+}
+
+.tp-star-full {
+	background: $tp-green;
+}
+
+.tp-star-half {
+	background: linear-gradient(to right, $tp-green 50%, #dcdce6 50%);
+}
+
+.tp-stars-lg .tp-star {
+	width: 1.75rem;
+	height: 1.75rem;
+	padding: 3px;
+}
+
+.tp-review {
+	margin: 0;
+
+	// Override the skin's blockquote style (blue bubble)
+	blockquote {
+		font-size: 0.95rem;
+		margin-top: 0.3rem;
+		padding: 0 0 0 0.75rem;
+		background: none;
+		color: #343a40;
+		border-left: 3px solid $tp-green;
+		border-radius: 0;
+	}
+
+	figcaption {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #6c757d;
+
+		&::before {
+			content: "— ";
+		}
+	}
+}
+
+// Review carousel: one quote at a time
+.tp-carousel {
+	margin-bottom: 0.25rem;
+
+	// Stack every slide in the same spot so the carousel is as tall as the
+	// longest quote, and the card doesn't change height as quotes change.
+	.carousel-inner {
+		display: flex;
+	}
+
+	.carousel-item {
+		display: block;
+		flex: 0 0 100%;
+		margin-right: -100%;
+		visibility: hidden;
+
+		&.active,
+		&.carousel-item-next,
+		&.carousel-item-prev {
+			visibility: visible;
+		}
+	}
+}
+
+.tp-carousel-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+
+	// Undo Bootstrap's overlay positioning so the dots sit in this row
+	.carousel-indicators {
+		position: static;
+		margin: 0;
+		align-items: center;
+		gap: 0.4rem;
+
+		button {
+			width: 0.6rem;
+			height: 0.6rem;
+			padding: 0;
+			border: 0;
+			border-radius: 50%;
+			background: #c4c4cf;
+			cursor: pointer;
+			transition: background-color 0.2s, transform 0.2s;
+
+			&.active {
+				background: $tp-green;
+				transform: scale(1.25);
+			}
+		}
+	}
+}
+
+.tp-carousel-arrow {
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: #6c757d;
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background: #eef0f3;
+		color: #343a40;
+	}
+}
+
+.tp-collector {
+	margin-top: 1rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

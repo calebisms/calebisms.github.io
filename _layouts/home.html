@@ -1,0 +1,18 @@
+---
+layout: minimal
+---
+{%- comment -%}
+  Home page layout: the theme's default layout, with a Trustpilot reviews card
+  beside the content on large screens. On smaller screens the card drops below.
+{%- endcomment -%}
+	{% include components/headers.html headertype= page.header_type imghero=page.header_img projects=page.project_links %}
+	<main class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<article id="maincontent" class="col-lg-8 mt-3 e-content">
+			{{- content -}}
+			</article>
+			<aside class="col-lg-4 mt-3" aria-label="Customer reviews">
+				{% include custom/trustpilot-card.html %}
+			</aside>
+		</div>
+	</main>

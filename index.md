@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Small Planet Copyediting
 header_type: hero
 header_img: './assets/img/pd.jpg'
@@ -10,7 +10,7 @@ My name is Caleb Turner, and I'm a full-time freelance editor who’s passionate
 
 Our editing service is priced competitively based on the level of detail you need:
 
-* **Basic proofread (US$10/A$15 per 1000 words):** Spelling and major grammar points, punctuation, and capitalization
+* **Basic proofread (US$10/A$15 per 1000 words):** Spelling and major grammar points, punctuation, and capitalisation
 * **Standard line edit (US$20/A$30 per 1000 words):** Detailed grammar check (verb tenses, parallel structure, run-on sentences, repeated words), formatting (font, spacing, indents), internal consistency
 * **Detailed structural edit (US$30/A$45 per 1000 words):** Rearrange and rewrite sentences/paragraphs to be natural and engaging. Polish pacing and delivery, character/argument development; condense and reword confusing sentences.
 
