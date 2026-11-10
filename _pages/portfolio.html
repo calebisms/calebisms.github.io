@@ -1,0 +1,45 @@
+---
+layout: default
+title: "Portfolio"
+permalink: /portfolio
+---
+
+<h2 class="h3">Books</h2>
+
+<div class="row">
+    {% for item in site.books %}
+    <div class="col-md-4 mb-4">
+        <article class="card h-100 text-primary">
+            <div class="card-body">
+                <a href="{{ item.link }}" target="_blank" rel="noopener">
+                    {% if item.thumbnail %}
+                        <img src="{{ item.thumbnail | relative_url }}" class="card-img-top" alt="Cover of {{ item.title }}"/>
+                    {% endif %}
+                    <h2 class="h5 card-title text-secondary">{{ item.title }}</h2>
+                </a>
+                <p class="card-text">Service: {{ item.service }}</p>
+            </div>
+        </article>
+    </div>
+    {% endfor %}
+</div>
+
+<h2 class="h3">Articles</h2>
+
+<div class="row">
+    {% for item in site.articles %}
+    <div class="col-md-4 mb-4">
+        <article class="card h-100 text-primary">
+            <div class="card-body">
+                <a href="{{ item.link }}" target="_blank" rel="noopener">
+                    {% if item.thumbnail %}
+                        <img src="{{ item.thumbnail | relative_url }}" class="card-img-top" alt="Cover of {{ item.title }}"/>
+                    {% endif %}
+                    <h2 class="h5 card-title text-secondary">{{ item.title }}</h2>
+                </a>
+                <p class="card-text">Service: {{ item.service }}</p>
+            </div>
+        </article>
+    </div>
+    {% endfor %}
+</div>

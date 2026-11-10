@@ -11,7 +11,7 @@ locale                  : "en-AU"
 title                   : "Small Planet Copyediting"    #default["repository_name"]
 title_separator         :     #default [" | "]
 subtitle                :     #default [your-repository-tagline]  
-description             : "A global copyediting service for all written work, from articles and blogs to memoirs and novels" #default [your-repository-tagline]
+description             : "A global editing service for all written work, from articles and blogs to memoirs and novels" #default [your-repository-tagline]
 url                     :     "https://smallplanet.au"
 #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/ Apparently only necessary when serving site from a subdirectory; see https://mademistakes.com/mastering-jekyll/site-url-baseurl/
@@ -24,7 +24,7 @@ twitter_site            :     #Avoid @
 author:
   name                  :  Small Planet Copyediting   # Name Surname Company
   avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
-  location              :  "Cairns, Australia"   # New York, USA 
+  location              :  "Gold Coast, Australia"   # New York, USA
 #  links:                
 #    - url:  #A link or email: https://twitter.com/jack, mail@example.com
 #      icon: # A Fontawesome 5 code: fab fa-twitter - see https://fontawesome.com/
@@ -104,6 +104,8 @@ navbar:
     url: /about
   - title: Pricing
     url: /pricing
+  - title: Portfolio
+    url: /portfolio
   - title: FAQ
     url: /faq
   - title: Contact
@@ -132,11 +134,9 @@ chulapa-skin:
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-# collections:
-#   samples:
-#     output: true
-#     permalink: /samples/:name
-# collections_dir     : 
+collections: [ books, articles ]
+# collections_dir:
+#     /portfolio/
 # permalink           : /:year:month:day_:title/
 
 
